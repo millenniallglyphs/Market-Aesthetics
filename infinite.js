@@ -1,5 +1,19 @@
-carob('#carotwo');
+
 carob('.carouselbox');
+carob('#carotwo');
+carob('#carothree');
+carob('#carofour');
+carob('#carofive');
+carob('#carosix');
+carob('#caroseven');
+carob('#caroeight');
+carob('#caronine');
+carob('#caroten');
+carob('#caroeleven');
+carob('#carotwelve');
+carob('#carothirteen');
+carob('#carofourteen');
+carob('#carofifteen');
 
 function carob(zip){
   // Read necessary elements from the DOM once

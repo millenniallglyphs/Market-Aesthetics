@@ -4,7 +4,11 @@
 ul, li, p, html, body, h3, form {
  padding: 0;
   margin: 0;
-  font-family: 'Maven Pro', sans-serif;
+  font-family: 'Space Mono', monospace;
+}
+
+a {
+  color: #e6e6e6;
 }
 
 
@@ -14,8 +18,10 @@ body {
 
 
 .container {
+  position: relative;
   max-width: 1200px;
   margin: auto;
+  top: -80px;
 }
 
 .header {
@@ -27,14 +33,20 @@ body {
   left: 2.5%;
   width: 95%;
   max-width: 1500px; 
-  justify-content: center;
-  align-items: center;
   z-index: 2;
-  height: 57px;
-margin: auto; 
-left: 0;
-right: 0;
-    border-bottom: 2px solid #000000;
+  height: 50px; 
+}
+
+.logo {
+  margin-top: 40px;
+}
+
+.logotop {
+  height: 30px;
+}
+
+.logo:hover {
+   height: 31px;
 }
 
 .mod {
@@ -43,14 +55,27 @@ right: 0;
   clear: both;
   border-bottom: 2px solid black;
   padding-bottom:  100px;
+  margin-top: 100px;
 }
 
 .text {
+  display: inline-flex;
   font-family: 'Inknut Antiqua', serif;
   font-size: 36px;
   float: right;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
+
+.outahere {
+  display: inline-flex;
+  float: right;
+  margin-top: 32px;
+}
+
+.out {
+  height: 30px;
+}
+
 .pic {
   max-width: 1200px;
   margin: auto;
@@ -64,35 +89,41 @@ right: 0;
 .bigim {
   width: 100%;
 }
-    .carouselbox {
-      font-family: helvetica,sans-serif;
+
+.carouselbox {
+     
       font-size: 14px;
       width: 100%;
       position: relative;
-      margin: 1em;
-      border: 1px solid #ccc;
-      box-shadow: 2px 2px 10px #ccc;
       overflow: hidden;
-    }
-    .content {
+      display: flex;
+  }
+.content {
       margin: 0;
       padding: 0;
     }
-    .content li {
+.content li {
+    position: absolute;
+    top: 0px;
+    display: block;
       font-size: 100px;
       margin: 0;
       padding: 0;
       width: 100%;
       list-style: none;
       text-align: center;
-      z-index: 2;
+      z-index: 1;
+  clear: none;
     }
-    .active {
-      height: 95vh
+.active {
+      height: 70vw;
     }
-    .carouselbox button {
+.carouselbox button {
       border: none;
       visibility: hidden;
+    background: transparent;
+    font-size: 40px;
+    color: white;
     }
     .active button {
       visibility: visible;
@@ -102,50 +133,149 @@ right: 0;
       left: -2000px;
     }
     .active .buttons {
-      padding: 5px 0;
-      background: #eee;
+      position: absolute;
+      margin-top: 30%;
+      width: 100%;
+      background: transparent;
       text-align: center;
-      z-index: 10;
-      position: relative;
+      z-index: 3;
     }
     .active li {
       position: absolute;
       top: 20px;
       opacity: 0;
       transform: scale(0);
-      transition: 1s;
     }
     .active li.current {
+      position: absolute;
+      display: block;
       top: 20px;
       opacity: 1;
       transform: scale(1);
-      transition: 1s;
     }
     .li img {
-      width: 200px;
-      height: 200px;
+      width: auto;
+      height: auto;
       display: block;
     }
+
+.next{
+  float: right;
+  margin-right: 2%;
+}
+
+.prev {
+  float: left;
+  margin-left: 2%;
+}
 
 /*footer*/
 
 .footer {
-  background-color: #e6e6e6;
+  background-color: black;
   display: block;
   top: 0;
   clear: both;
   height: auto;
   display: grid;
-  grid-template-columns: auto auto auto;
-  border-bottom: 80px solid black;
+  grid-template-columns: 50% 50%;
+  border-bottom: 180px solid black;
   font-size: 12px;
   
+}
+
+.right {
+  width: 100%;
+  float: right;
+  padding: 20px;
+  color: #e6e6e6;
+  text-align: right;
+  
+}
+.left {
+  width: 20%;
+  padding: 20px;
+  background-color: black;
+  color: #e6e6e6;
+  font-family: 'Space Mono', monospace;
 }
 
 
 /*20em*//*20em*//*20em*//*20em*//*20em*//*20em*//*20em*//*20em*//*20em*//*20em*//*20em*//*20em*/
 
 @media only screen and (min-width: 5em) {
+  .active {
+      height: 70vw;
+    }
+  .container {
+  max-width: 1200px;
+  margin: auto;
+    margin-left: 0%;
+  margin-right: 0%;
+}
+  
+  .header {
+  position: fixed;
+  width: 100%;
+  background-color: #e6e6e6;
+  display: flex;
+  margin-left: -2.5%;
+  top: 0;
+  z-index: 5;
+  height: 50px; 
+}
+
+.logo {
+  margin: auto;
+  margin-top: 10px;
+}
+  
+  .text {
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 36px;
+  float: right;
+  padding-right: 5%;
+}
+  
+  .outahere {
+  display: inline-flex;
+  float: right;
+  margin-top: 32px;
+    margin-right: 5%;
+}
+  
+.footer {
+  background-color: black;
+  display: block;
+  top: 0;
+  clear: both;
+  height: auto;
+  display: grid;
+  grid-template-columns:  auto;
+  border-bottom: 180px solid black;
+  font-size: 12px;
+  
+}
+  
+.right {
+  display: block;
+  width: 100%;
+  float: none;
+  padding: 20px;
+  color: #e6e6e6;
+  clear: both;
+  
+}
+.left {
+  display: block;
+  width: 100%;
+  clear: both;
+  float: none;
+  padding: 20px;
+  background-color: black;
+  color: #e6e6e6;
+  font-family: 'Space Mono', monospace;
+}
   
     
 }
@@ -153,12 +283,77 @@ right: 0;
 /*40em*//*40em*//*40em*//*40em*//*40em*//*40em*//*40em*//*40em*//*40em*//*40em*//*40em*//*40em*/
 
 @media only screen and (min-width: 40em) {
+  .active {
+      height: 70vw;
+    }
+  .container {
+  max-width: 1200px;
+  margin: auto;
+    margin-left: 0%;
+  margin-right: 0%;
+}
+  
+  .header {
+  position: fixed;
+  width: 100%;
+  background-color: #e6e6e6;
+  display: flex;
+  top: 0;
+  z-index: 20;
+  height: 50px;
+    margin-left: 0px;
+}
+
+.logo {
+  margin-top: 40px;
+  width: 100px;
+  margin: auto;
+}
+  
+.footer {
+  background-color: black;
+  display: block;
+  top: 0;
+  clear: both;
+  height: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-bottom: 180px solid black;
+  font-size: 12px;
+  
+}
+  
+
+  
   
 }
 
 /*60 em*//*60 em*//*60 em*//*60 em*//*60 em*//*60 em*//*60 em*//*60 em*//*60 em*//*60 em*//*60 em*/
 
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 75em) {
+  .active {
+      height: 60vw;
+    }
+  .container {
+  max-width: 1200px;
+  margin: auto;
+}
+  .text {
+  font-family: 'Inknut Antiqua', serif;
+  font-size: 36px;
+  float: right;
+    padding-left: 0;
+  /*border: 1px solid red;*/
+}
+
+  .outahere {
+  display: inline-flex;
+  float: right;
+  margin-top: 32px;
+  margin-right: 0;
+}
+  
+
     
   
 }
@@ -167,6 +362,14 @@ right: 0;
 /*80em*//*80em*//*80em*//*80em*//*80em*//*80em*//*80em*//*80em*//*80em*//*80em*//*80em*//*80em*/
 
 @media screen and (min-width: 80em) {
+  .active {
+      height: 50vw;
+    }
+  .container {
+  max-width: 1200px;
+  margin: auto;
+
+}
     
 
 }
