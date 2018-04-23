@@ -30,19 +30,23 @@ body {
   background-color: #e6e6e6;
   display: flex;
   top: 0;
-  left: 2.5%;
-  width: 95%;
-  max-width: 1500px; 
   z-index: 2;
   height: 50px; 
 }
 
 .logo {
+  display: block;
+  position: relative;
+  width: 40px;
   margin-top: 40px;
+  margin: auto;
+  padding: auto;
 }
 
 .logotop {
-  height: 30px;
+  height: 20px;
+  width: 40px;
+
 }
 
 .logo:hover {
@@ -224,11 +228,6 @@ body {
   z-index: 5;
   height: 50px; 
 }
-
-.logo {
-  margin: auto;
-  margin-top: 10px;
-}
   
   .text {
   font-family: 'Inknut Antiqua', serif;
@@ -304,11 +303,6 @@ body {
     margin-left: 0px;
 }
 
-.logo {
-  margin-top: 40px;
-  width: 100px;
-  margin: auto;
-}
   
 .footer {
   background-color: black;
