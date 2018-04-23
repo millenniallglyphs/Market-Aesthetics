@@ -332,7 +332,7 @@ body {
 
 @media screen and (min-width: 75em) {
   .active {
-      height: 60vw;
+      height: 70vw;
     }
   .container {
   max-width: 1200px;
@@ -363,7 +363,7 @@ body {
 
 @media screen and (min-width: 80em) {
   .active {
-      height: 50vw;
+      height: 60vw;
     }
   .container {
   max-width: 1200px;
