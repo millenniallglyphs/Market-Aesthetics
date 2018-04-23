@@ -19,7 +19,7 @@ body {
 
 .container {
   position: relative;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
   top: -80px;
 }
@@ -77,7 +77,7 @@ body {
 }
 
 .pic {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
   border: none;
 }
